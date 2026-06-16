@@ -64,18 +64,22 @@ function App() {
       </h2>
 
       {/* About */}
-      <p
-        style={{
-          maxWidth: "800px",
-          margin: "20px auto",
-          fontSize: "18px",
-          lineHeight: "1.8",
-        }}
-      >
-        Passionate about Embedded Systems, IoT, AI, and hardware-software
-        integration. Skilled in Raspberry Pi, ESP32, STM32, FPGA technologies,
-        and intelligent embedded solutions.
-      </p>
+     <p
+  style={{
+    maxWidth: "850px",
+    margin: "20px auto",
+    fontSize: "18px",
+    lineHeight: "1.8",
+  }}
+>
+  I am an Electronics and Communication Engineering student
+  passionate about Embedded Systems, IoT, FPGA, and VLSI
+  technologies. I enjoy designing intelligent hardware-software
+  solutions using Raspberry Pi, ESP32, STM32, and AI-based
+  applications. My goal is to contribute to innovative embedded
+  and semiconductor technologies through continuous learning
+  and hands-on development.
+</p>
 
       {/* Buttons */}
       <div style={{ marginBottom: "40px" }}>
@@ -95,14 +99,16 @@ function App() {
           style={buttonStyle}
         >
           LinkedIn
+        </a>
+
         <a
-  href="/resume.pdf"
-  target="_blank"
-  rel="noreferrer"
-  style={buttonStyle}
->
-  Resume
-</a>
+          href="/Resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          style={buttonStyle}
+        >
+          Resume
+        </a>
       </div>
 
       {/* Skills */}
@@ -132,25 +138,39 @@ function App() {
       <div style={cardStyle}>
         <h3>AI-Based Plastic Waste Classification System</h3>
         <p>
-          Developed an AI-powered plastic classification system using
-          Raspberry Pi and TensorFlow Lite for automated sorting.
+         
+  Developed an AI-powered plastic waste classification system
+  using Raspberry Pi and TensorFlow Lite for real-time image
+  processing. The system automatically identifies different
+  categories of plastic waste and enables smart segregation,
+  improving recycling efficiency and supporting sustainable
+  waste management solutions.
+
         </p>
       </div>
 
       <div style={cardStyle}>
         <h3>Smart Waste Monitoring System</h3>
-        <p>
-          Designed an IoT-based smart dustbin monitoring system with
-          ultrasonic sensors and automated email alerts.
-        </p>
+      
+          <p>
+  Designed and developed an IoT-based smart waste monitoring
+  system using ultrasonic sensors and ESP32. The system
+  continuously monitors dustbin levels and sends automated
+  email alerts when the bin reaches a threshold, enabling
+  efficient waste collection and reducing overflow issues.
+</p>
       </div>
 
       <div style={cardStyle}>
         <h3>Li-Fi Communication System</h3>
-        <p>
-          Developed a visible light communication system using laser
-          diode transmission and solar panel reception.
-        </p>
+        
+         <p>
+  Implemented a Li-Fi communication system using visible light
+  communication technology. Data transmission was achieved
+  through laser diode modulation and received using a solar
+  panel, demonstrating secure, high-speed wireless
+  communication without conventional radio frequencies.
+</p>
       </div>
 
       {/* Internship */}
@@ -161,9 +181,12 @@ function App() {
       <div style={cardStyle}>
         <h3>Enthu Technology Solutions, Coimbatore</h3>
         <p>
-          Worked with Raspberry Pi, ESP32, and STM32 platforms.
-          Interfaced sensors and developed IoT applications.
-        </p>
+  Completed hands-on training in Embedded Systems and IoT
+  development using Raspberry Pi, ESP32, and STM32
+  microcontrollers. Worked on sensor interfacing, communication
+  protocols, and real-time embedded applications while gaining
+  practical industry exposure.
+</p>
       </div>
 
       {/* Certifications */}
@@ -184,18 +207,19 @@ function App() {
         🎓 Education
       </h2>
 
-      <p>B.E. Electronics and Communication Engineering</p>
-      <p>Dr. N.G.P Institute of Technology</p>
-      <p>CGPA: 7.92 / 10 (2023 – 2027)</p>
-
+      <p>
+  <strong>B.E. Electronics and Communication Engineering</strong>
+</p>
+<p>Dr. N.G.P Institute of Technology, Coimbatore</p>
+<p>CGPA: 7.92 / 10 (2023 – 2027)</p>
       {/* Contact */}
       <h2 style={{ color: "#38bdf8", marginTop: "50px" }}>
         📞 Contact
       </h2>
 
-      <p>📧 Email: grkannan8523@gmail.com</p>
-      <p>📱 Phone: +91-8523913407</p>
-      <p>📍 Tiruppur, Tamil Nadu</p>
+    <p>📧 Email: grkannan8523@gmail.com</p>
+<p>📱 Phone: +91 8523913407</p>
+<p>📍 Tiruppur, Tamil Nadu, India</p>
 
       {/* Footer */}
       <p
