@@ -33,12 +33,12 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 opacity-10 pointer-events-none circuit-grid"></div>
 
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-        
+
         {/* Profile Picture Panel (Mobile: Top / Desktop: Right side (cols 6-12)) */}
         {/* On Mobile devices, place the image above the text (which we achieve by ordering) */}
         <div className="lg:col-span-6 lg:order-2 flex flex-col items-center justify-center relative select-none">
           <div className="relative flex items-center justify-center">
-            
+
             {/* Pulsating glowing background pools */}
             <div className="absolute w-64 h-64 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px] rounded-full bg-gradient-to-tr from-cyber-cyan/15 to-cyber-purple/15 blur-3xl opacity-60 animate-pulse-glow" />
 
@@ -110,14 +110,14 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Text Details (Mobile: Bottom / Desktop: Left side (cols 1-6)) */}
-        <div className="lg:col-span-6 lg:order-1 flex flex-col text-center lg:text-left items-center lg:items-start space-y-6">
+        <div className="lg:col-span-6 lg:order-1 flex flex-col text-center lg:text-left items-center lg:items-start space-y-4">
           <div className="space-y-2">
             {/* Status indicator pin */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan font-mono text-[10px] tracking-wider uppercase mb-2">
               <span className="h-1.5 w-1.5 rounded-full bg-cyber-cyan animate-ping" />
               ECE Engineer | Semiconductor Spec
             </div>
-            
+
             <h1 className="font-orbitron text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
               KANNAN <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan to-cyber-blue glow-text-cyan">G R</span>
             </h1>
@@ -141,7 +141,7 @@ export const Hero: React.FC = () => {
               <FileText className="w-4 h-4" />
               DOWNLOAD RESUME
             </a>
-            
+
             <button
               onClick={handleScrollToContact}
               className="flex items-center gap-2 bg-transparent text-white border border-cyber-cyan/40 hover:bg-cyber-cyan/10 px-5 py-3 rounded-lg font-orbitron text-xs font-bold tracking-widest transition-all duration-300 hover:scale-[1.02] cursor-pointer"
