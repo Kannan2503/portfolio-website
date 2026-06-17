@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Cpu, Target, BookOpen, GraduationCap, Terminal } from 'lucide-react';
 
+const interests = [
+  'VLSI Design',
+  'Digital IC Design',
+  'FPGA Development',
+  'Embedded Systems',
+  'Internet of Things (IoT)',
+  'Semiconductor Technologies',
+  'AI in Edge Devices',
+  'Hardware-Software Co-design',
+  'Computer Vision',
+  'Firmware Development',
+];
+
 export const About: React.FC = () => {
-  const interests = [
-    'VLSI Design',
-    'Digital IC Design',
-    'FPGA Development',
-    'Embedded Systems',
-    'Internet of Things (IoT)',
-    'Semiconductor Technologies',
-    'AI in Edge Devices',
-    'Hardware-Software Co-design',
-    'Computer Vision',
-    'Firmware Development',
-  ];
 
   const [currentIdx, setCurrentIdx] = useState(0);
   const [displayText, setDisplayText] = useState('');
@@ -25,37 +26,38 @@ export const About: React.FC = () => {
     const currentFullText = interests[currentIdx];
 
     if (isDeleting) {
-      // Deleting characters
-      timer = window.setTimeout(() => {
-        setDisplayText(currentFullText.substring(0, displayText.length - 1));
-      }, 30);
+      if (displayText === '') {
+        // If fully deleted, switch to typing next word (deferred)
+        timer = window.setTimeout(() => {
+          setIsDeleting(false);
+          setTypedHistory((prev) => {
+            const next = [currentFullText, ...prev];
+            return next.slice(0, 5);
+          });
+          setCurrentIdx((prev) => (prev + 1) % interests.length);
+        }, 100);
+      } else {
+        // Deleting characters
+        timer = window.setTimeout(() => {
+          setDisplayText(currentFullText.substring(0, displayText.length - 1));
+        }, 30);
+      }
     } else {
-      // Typing characters
-      timer = window.setTimeout(() => {
-        setDisplayText(currentFullText.substring(0, displayText.length + 1));
-      }, 70);
-    }
-
-    // If fully typed, wait and switch to deleting
-    if (!isDeleting && displayText === currentFullText) {
-      timer = window.setTimeout(() => {
-        setIsDeleting(true);
-      }, 1800);
-    }
-
-    // If fully deleted, switch to typing next word
-    if (isDeleting && displayText === '') {
-      setIsDeleting(false);
-      // Add previous interest to history list (max 5)
-      setTypedHistory((prev) => {
-        const next = [currentFullText, ...prev];
-        return next.slice(0, 5);
-      });
-      setCurrentIdx((prev) => (prev + 1) % interests.length);
+      if (displayText === currentFullText) {
+        // If fully typed, wait and switch to deleting
+        timer = window.setTimeout(() => {
+          setIsDeleting(true);
+        }, 1800);
+      } else {
+        // Typing characters
+        timer = window.setTimeout(() => {
+          setDisplayText(currentFullText.substring(0, displayText.length + 1));
+        }, 70);
+      }
     }
 
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, currentIdx]);
+  }, [displayText, isDeleting, currentIdx, interests]);
 
   return (
     <section id="about" className="py-20 px-6 md:px-12 max-w-7xl mx-auto border-t border-slate-900">

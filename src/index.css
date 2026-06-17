@@ -3,6 +3,7 @@
 @theme {
   --font-orbitron: "Orbitron", sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
+
   --color-cyber-cyan: #00f2fe;
   --color-cyber-blue: #0072ff;
   --color-cyber-purple: #a015fa;
@@ -11,7 +12,7 @@
   --color-cyber-gray: #1f2937;
 }
 
-/* Base styles */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -34,17 +35,16 @@ body {
   min-height: 100vh;
 }
 
-/* Links */
 a {
   text-decoration: none;
 }
 
-/* Orbitron font */
+/* Orbitron Font */
 .font-orbitron {
   font-family: "Orbitron", sans-serif;
 }
 
-/* Glassmorphism */
+/* Glass Panels */
 .glass-panel {
   background: rgba(10, 13, 26, 0.45);
   backdrop-filter: blur(12px);
@@ -59,7 +59,7 @@ a {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
 
-/* Glow */
+/* Glow Effects */
 .glow-cyan {
   box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
 }
@@ -99,11 +99,12 @@ a {
   background: rgba(0, 242, 254, 0.4);
 }
 
-/* Animations */
+/* Floating Animation */
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-15px);
   }
@@ -117,10 +118,12 @@ a {
   animation: float 4s ease-in-out infinite;
 }
 
+/* Pulse Glow */
 @keyframes pulse-glow {
   0%, 100% {
     opacity: 0.3;
   }
+
   50% {
     opacity: 0.8;
   }
@@ -130,10 +133,18 @@ a {
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
-/* Circuit Pattern */
+/* Circuit Grid */
 .circuit-grid {
   background-size: 40px 40px;
   background-image:
-    linear-gradient(to right, rgba(0, 242, 254, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 242, 254, 0.03) 1px, transparent 1px);
+    linear-gradient(
+      to right,
+      rgba(0, 242, 254, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 242, 254, 0.03) 1px,
+      transparent 1px
+    );
 }

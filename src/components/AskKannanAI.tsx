@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/purity */
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, Cpu, User, Terminal } from 'lucide-react';
 

@@ -114,7 +114,11 @@ export const SemiconductorDashboard: React.FC = () => {
           <div className="h-24 flex items-end gap-1 px-1 border-b border-l border-slate-800">
             {Array.from({ length: 24 }).map((_, i) => {
               const baseHeight = Math.sin((i / 24) * Math.PI * 2) * 35 + 45;
-              const randomHeight = baseHeight + (Math.random() - 0.5) * (isOverclocked ? 20 : 6);
+              // Generate a deterministic random-like factor using binaryPulse and index i to comply with purity rules
+              const seed = parseInt(binaryPulse, 2) + i;
+              const sinVal = Math.sin(seed) * 10000;
+              const randomFactor = (sinVal - Math.floor(sinVal)) - 0.5;
+              const randomHeight = baseHeight + randomFactor * (isOverclocked ? 20 : 6);
               const heightPercent = Math.max(10, Math.min(95, randomHeight));
               return (
                 <div

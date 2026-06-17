@@ -163,7 +163,8 @@ export const SemiconductorBackground: React.FC = () => {
         spawnElectron();
       }
 
-      electrons.forEach((el, index) => {
+      for (let i = electrons.length - 1; i >= 0; i--) {
+        const el = electrons[i];
         el.progress += el.speed;
         el.x = el.startX + (el.endX - el.startX) * el.progress;
         el.y = el.startY + (el.endY - el.startY) * el.progress;
@@ -188,9 +189,9 @@ export const SemiconductorBackground: React.FC = () => {
         ctx.shadowBlur = 0;
 
         if (el.progress >= 1) {
-          electrons.splice(index, 1);
+          electrons.splice(i, 1);
         }
-      });
+      }
 
       // 4. Draw grid dots with cursor glow
       dots.forEach((dot) => {
