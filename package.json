@@ -1,44 +1,28 @@
 {
-<<<<<<< HEAD
   "name": "kannan-portfolio",
-=======
-  "name": "portfolio-website",
->>>>>>> 526631020262e4d308e2bc12fc40f1e87b1258c5
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-<<<<<<< HEAD
     "build": "tsc -b && vite build",
-=======
-    "build": "vite build",
->>>>>>> 526631020262e4d308e2bc12fc40f1e87b1258c5
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.1",
-<<<<<<< HEAD
     "canvas-confetti": "^1.9.4",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.20.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-=======
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
     "react-icons": "^5.6.0",
->>>>>>> 526631020262e4d308e2bc12fc40f1e87b1258c5
     "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-<<<<<<< HEAD
     "@types/canvas-confetti": "^1.9.0",
     "@types/node": "^24.13.2",
-=======
->>>>>>> 526631020262e4d308e2bc12fc40f1e87b1258c5
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
@@ -46,11 +30,8 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
-<<<<<<< HEAD
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
-=======
->>>>>>> 526631020262e4d308e2bc12fc40f1e87b1258c5
     "vite": "^8.0.12"
   }
 }
