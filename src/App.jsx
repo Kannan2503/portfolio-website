@@ -1,235 +1,178 @@
 import profile from "./assets/profile.jpeg";
 
 function App() {
-  const cardStyle = {
-    background: "rgba(30, 41, 59, 0.8)",
-    padding: "25px",
-    borderRadius: "20px",
-    margin: "20px auto",
-    maxWidth: "800px",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
-    border: "1px solid #334155",
-  };
-
-  const buttonStyle = {
-    background: "#38bdf8",
-    color: "black",
-    padding: "12px 20px",
-    margin: "10px",
-    borderRadius: "8px",
-    textDecoration: "none",
-    fontWeight: "bold",
-    display: "inline-block",
-  };
-
   return (
     <div
       style={{
-        background: "linear-gradient(135deg, #0f172a, #1e293b)",
-        color: "white",
         minHeight: "100vh",
-        padding: "20px",
-        fontFamily: "Arial",
-        textAlign: "center",
+        background: "linear-gradient(135deg, #020617, #0f172a)",
+        color: "white",
+        fontFamily: "Arial, sans-serif",
+        padding: "0 8%",
       }}
     >
-      {/* Profile Photo */}
-      <img
-        src={profile}
-        alt="Kannan"
+      {/* Navbar */}
+      <nav
         style={{
-          width: "180px",
-          height: "180px",
-          borderRadius: "50%",
-          objectFit: "cover",
-          border: "4px solid #38bdf8",
-          marginBottom: "20px",
-          boxShadow: "0 0 25px rgba(56, 189, 248, 0.5)",
-        }}
-      />
-
-      {/* Name */}
-      <h1
-        style={{
-          fontSize: "clamp(2rem, 5vw, 3.5rem)",
-          marginBottom: "10px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "25px 0",
         }}
       >
-        KANNAN G R
-      </h1>
+        <h2 style={{ color: "#22d3ee", fontSize: "32px" }}>
+          KANNAN
+        </h2>
 
-      {/* Title */}
-      <h2 style={{ color: "#38bdf8" }}>
-        Embedded Systems Engineer | IoT Enthusiast | FPGA & VLSI Learner
-      </h2>
+        <div style={{ display: "flex", gap: "30px" }}>
+          <a href="#about" style={{ color: "white", textDecoration: "none" }}>
+            About
+          </a>
+          <a href="#skills" style={{ color: "white", textDecoration: "none" }}>
+            Skills
+          </a>
+          <a href="#projects" style={{ color: "white", textDecoration: "none" }}>
+            Projects
+          </a>
+          <a href="#contact" style={{ color: "white", textDecoration: "none" }}>
+            Contact
+          </a>
+        </div>
+      </nav>
 
-      {/* About */}
-     <p
-  style={{
-    maxWidth: "850px",
-    margin: "20px auto",
-    fontSize: "18px",
-    lineHeight: "1.8",
-  }}
->
-  I am an Electronics and Communication Engineering student
-  passionate about Embedded Systems, IoT, FPGA, and VLSI
-  technologies. I enjoy designing intelligent hardware-software
-  solutions using Raspberry Pi, ESP32, STM32, and AI-based
-  applications. My goal is to contribute to innovative embedded
-  and semiconductor technologies through continuous learning
-  and hands-on development.
-</p>
-
-      {/* Buttons */}
-      <div style={{ marginBottom: "40px" }}>
-        <a
-          href="https://github.com/Kannan2503"
-          target="_blank"
-          rel="noreferrer"
-          style={buttonStyle}
-        >
-          GitHub
-        </a>
-
-        <a
-          href="https://linkedin.com/in/kannan-g-r-7426a137a"
-          target="_blank"
-          rel="noreferrer"
-          style={buttonStyle}
-        >
-          LinkedIn
-        </a>
-
-        <a
-          href="/Resume.pdf"
-          target="_blank"
-          rel="noreferrer"
-          style={buttonStyle}
-        >
-          Resume
-        </a>
-      </div>
-
-      {/* Skills */}
-      <h2 style={{ color: "#38bdf8" }}>🛠 Skills</h2>
-
-      <div style={{ fontSize: "20px", lineHeight: "2" }}>
-        <p>⚡ C Programming</p>
-        <p>🐍 Python</p>
-        <p>☕ Java</p>
-        <p>💻 Verilog</p>
-        <p>🍓 Raspberry Pi</p>
-        <p>📡 ESP32</p>
-        <p>🔧 STM32</p>
-        <p>🧠 TensorFlow Lite</p>
-        <p>⚙️ FPGA</p>
-        <p>🔬 Xilinx Vivado</p>
-        <p>📐 Quartus Prime</p>
-        <p>🛠️ Arduino IDE</p>
-        <p>🔌 UART | SPI | I2C | GPIO</p>
-      </div>
-
-      {/* Projects */}
-      <h2 style={{ color: "#38bdf8", marginTop: "50px" }}>
-        🚀 Projects
-      </h2>
-
-      <div style={cardStyle}>
-        <h3>AI-Based Plastic Waste Classification System</h3>
-        <p>
-         
-  Developed an AI-powered plastic waste classification system
-  using Raspberry Pi and TensorFlow Lite for real-time image
-  processing. The system automatically identifies different
-  categories of plastic waste and enables smart segregation,
-  improving recycling efficiency and supporting sustainable
-  waste management solutions.
-
-        </p>
-      </div>
-
-      <div style={cardStyle}>
-        <h3>Smart Waste Monitoring System</h3>
-      
-          <p>
-  Designed and developed an IoT-based smart waste monitoring
-  system using ultrasonic sensors and ESP32. The system
-  continuously monitors dustbin levels and sends automated
-  email alerts when the bin reaches a threshold, enabling
-  efficient waste collection and reducing overflow issues.
-</p>
-      </div>
-
-      <div style={cardStyle}>
-        <h3>Li-Fi Communication System</h3>
-        
-         <p>
-  Implemented a Li-Fi communication system using visible light
-  communication technology. Data transmission was achieved
-  through laser diode modulation and received using a solar
-  panel, demonstrating secure, high-speed wireless
-  communication without conventional radio frequencies.
-</p>
-      </div>
-
-      {/* Internship */}
-      <h2 style={{ color: "#38bdf8", marginTop: "50px" }}>
-        💼 Internship
-      </h2>
-
-      <div style={cardStyle}>
-        <h3>Enthu Technology Solutions, Coimbatore</h3>
-        <p>
-  Completed hands-on training in Embedded Systems and IoT
-  development using Raspberry Pi, ESP32, and STM32
-  microcontrollers. Worked on sensor interfacing, communication
-  protocols, and real-time embedded applications while gaining
-  practical industry exposure.
-</p>
-      </div>
-
-      {/* Certifications */}
-      <h2 style={{ color: "#38bdf8", marginTop: "50px" }}>
-        📜 Certifications
-      </h2>
-
-      <div style={{ fontSize: "18px", lineHeight: "2" }}>
-        <p>✅ MIT RISC-V on FPGA</p>
-        <p>✅ SystemVerilog for Semiconductor Design</p>
-        <p>✅ Digital Design – Maven Silicon</p>
-        <p>✅ PCB Design Workshop</p>
-        <p>✅ Analog Electronics Certification</p>
-      </div>
-
-      {/* Education */}
-      <h2 style={{ color: "#38bdf8", marginTop: "50px" }}>
-        🎓 Education
-      </h2>
-
-      <p>
-  <strong>B.E. Electronics and Communication Engineering</strong>
-</p>
-<p>Dr. N.G.P Institute of Technology, Coimbatore</p>
-<p>CGPA: 7.92 / 10 (2023 – 2027)</p>
-      {/* Contact */}
-      <h2 style={{ color: "#38bdf8", marginTop: "50px" }}>
-        📞 Contact
-      </h2>
-
-    <p>📧 Email: grkannan8523@gmail.com</p>
-<p>📱 Phone: +91 8523913407</p>
-<p>📍 Tiruppur, Tamil Nadu, India</p>
-
-      {/* Footer */}
-      <p
+      {/* Hero Section */}
+      <div
         style={{
-          marginTop: "50px",
-          color: "#94a3b8",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          minHeight: "80vh",
+          gap: "40px",
         }}
       >
-        © 2026 KANNAN G R | Portfolio
-      </p>
+        {/* Left Side */}
+        <div style={{ flex: 1 }}>
+          <p
+            style={{
+              color: "#22d3ee",
+              fontSize: "30px",
+              marginBottom: "10px",
+            }}
+          >
+            Hello, I'm
+          </p>
+
+          <h1
+            style={{
+              fontSize: "90px",
+              margin: 0,
+              lineHeight: 1,
+            }}
+          >
+            KANNAN G R
+          </h1>
+
+          <h2
+            style={{
+              fontSize: "35px",
+              color: "#cbd5e1",
+              marginTop: "20px",
+            }}
+          >
+            Embedded Systems Engineer
+            <br />
+            IoT Enthusiast | FPGA & VLSI Learner
+          </h2>
+
+          <p
+            style={{
+              fontSize: "22px",
+              color: "#94a3b8",
+              lineHeight: 1.8,
+              maxWidth: "700px",
+              marginTop: "25px",
+            }}
+          >
+            Electronics and Communication Engineering student
+            passionate about Embedded Systems, IoT, FPGA,
+            VLSI and AI-based solutions using Raspberry Pi,
+            ESP32 and STM32.
+          </p>
+
+          {/* Buttons */}
+          <div
+            style={{
+              display: "flex",
+              gap: "20px",
+              marginTop: "35px",
+            }}
+          >
+            <a
+              href="https://github.com/Kannan2503"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                background: "#22d3ee",
+                color: "black",
+                padding: "14px 28px",
+                borderRadius: "10px",
+                textDecoration: "none",
+                fontWeight: "bold",
+              }}
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://linkedin.com/in/kannan-g-r-7426a137a"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                border: "2px solid #22d3ee",
+                color: "#22d3ee",
+                padding: "14px 28px",
+                borderRadius: "10px",
+                textDecoration: "none",
+                fontWeight: "bold",
+              }}
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="/Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                border: "2px solid white",
+                color: "white",
+                padding: "14px 28px",
+                borderRadius: "10px",
+                textDecoration: "none",
+                fontWeight: "bold",
+              }}
+            >
+              Resume
+            </a>
+          </div>
+        </div>
+
+        {/* Right Side Image */}
+        <div>
+          <img
+            src={profile}
+            alt="Kannan"
+            style={{
+              width: "350px",
+              height: "350px",
+              borderRadius: "50%",
+              objectFit: "cover",
+              border: "6px solid #22d3ee",
+              boxShadow: "0 0 40px rgba(34,211,238,0.5)",
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 }
