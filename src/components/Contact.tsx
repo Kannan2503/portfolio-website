@@ -159,7 +159,7 @@ export const Contact: React.FC = () => {
             
             <div className="space-y-2 text-xs font-mono text-slate-400">
               <p>
-                Email: <a href="mailto:kannangr@example.com" className="text-cyber-cyan hover:underline">kannangr@example.com</a> (Mock)
+                Email: <a href="mailto:kannangr8523@gmail.com" className="text-cyber-cyan hover:underline">kannangr@example.com</a> (Mock)
               </p>
               <p>
                 Location: Dr. N.G.P Institute of Technology, Coimbatore, Tamil Nadu, India
