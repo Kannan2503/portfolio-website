@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-cyber-cyan: #00f2fe;
+  --color-cyber-blue: #0072ff;
+  --color-cyber-purple: #a015fa;
+  --color-cyber-dark: #030712;
+  --color-cyber-darker: #010208;
+  --color-cyber-gray: #1f2937;
+}
+
+/* Base custom styles */
+body {
+  background-color: #010208;
+  color: #e5e7eb;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Orbitron font for headings */
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(10, 13, 26, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 242, 254, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-purple {
+  background: rgba(10, 13, 26, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(160, 21, 250, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+.glow-blue {
+  box-shadow: 0 0 15px rgba(0, 114, 255, 0.4);
+}
+
+.glow-purple {
+  box-shadow: 0 0 15px rgba(160, 21, 250, 0.4);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 10px rgba(160, 21, 250, 0.6);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #010208;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f172a;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 242, 254, 0.4);
+}
+
+/* Keyframes and Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Wafer/Circuit Pattern */
+.circuit-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 242, 254, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 242, 254, 0.03) 1px, transparent 1px);
+}
